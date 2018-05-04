@@ -1,14 +1,14 @@
 //Main File for the FrontEnd Template
 import { Component } from '@angular/core';
-import { NavComponent } from "./nav.component";
+import { Solutions } from "./solutions.component";
+import { NewSolutionComponent } from "./new-solution.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'home',
   // templateUrl: './app.component.html',
   template: `
-  <Nav></Nav>
-  <router-outlet></router-outlet>
-  `,
+  <new-solution></new-solution>
+  <Solutions></Solutions>`,
   styleUrls: ['./app.component.css']
 })
 
@@ -18,7 +18,7 @@ import { NavComponent } from "./nav.component";
 
 //(onPosted)="onPosted($event)" is responsible for specifying where the data is coming from so the event can listen.
 //$event = event payload
-export class AppComponent {
+export class HomeComponent {
 
   //viewchild decorator paramater is used to specify component we will be accessing.
   //Watches component that is passed in.
